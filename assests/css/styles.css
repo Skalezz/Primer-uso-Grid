@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 200px repeat(3, 1fr);
+  grid-template-areas: "nav nav nav nav" "aside section section section" "aside section section section" "footer footer footer footer";
+}
+body nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right top, #16e7a5, #00c6c6, #31a0be, #667c94, #606060);
+  color: white;
+  gap: 20px;
+}
+body nav figure {
+  width: 60px;
+}
+body nav figure img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body nav div:nth-of-type(2) {
+  width: 100%;
+}
+body nav div:nth-of-type(2) h1 {
+  text-align: center;
+}
+body aside {
+  grid-area: aside;
+  padding: 10px;
+  font-size: 20px;
+}
+body aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+}
+body aside ul p {
+  padding-bottom: 8px;
+}
+body aside ul button {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 5px 10px;
+  width: 100%;
+  border: none;
+  background-color: #00c6c6;
+  color: white;
+}
+body section {
+  grid-area: section;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-gap: 10px;
+}
+body section .card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+body section .card img {
+  width: 100%;
+}
+body section .card button {
+  border-radius: 8px;
+  padding: 5px 10px;
+  width: 100%;
+  border: none;
+  background-color: #00c6c6;
+  color: white;
+  cursor: pointer;
+}
+body section .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 30px white;
+}
+body footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: linear-gradient(to right top, #16e7a5, #00c6c6, #31a0be, #667c94, #606060);
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */
